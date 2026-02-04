@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="background.css">
+</head>
+
+<body>
+    <button>
+        Click
+    </button>
+    <script>
+        const button = document.querySelector('button');
+        const body = document.querySelector('body');
+
+        function changeBackground() {
+            var r = Math.floor(Math.random() * 256);
+            var g = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            document.body.style.backgroundColor =
+                "rgb(" + r + "," + g + "," + b + ")";
+        }
+
+        button.addEventListener('click', changeBackground);
+    </script>
+</body>
+
+</html>
